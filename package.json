@@ -1,0 +1,23 @@
+{
+  "name": "Full-Stack-Blockchain",
+  "version": "1.0.0",
+  "description": "Git Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Web3Magic/Full-Stack-Blockchain.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Web3Magic/Full-Stack-Blockchain/issues"
+  },
+  "homepage": "https://github.com/Web3Magic/Full-Stack-Blockchain#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
