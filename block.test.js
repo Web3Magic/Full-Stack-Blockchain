@@ -1,3 +1,5 @@
+const Block = require('./block');
+
 describe('Block', () =>{
   const timestamp = 'a-date';
   const lastHash = 'foo-hash';
