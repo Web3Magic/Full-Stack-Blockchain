@@ -4,3 +4,5 @@ const GENESIS_DATA = {
   hash: 'hash-one',
   data: []
 };
+
+module.exports = { GENESIS_DATA };
