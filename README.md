@@ -18,3 +18,16 @@
  include transactions in core blocks of the chain.
 
 This chain is an open-source project and contributions are welcome!
+
+What has been done 11 15 2021
+Created the basic building block of the blockchain - with blocks themselves!
+
+Started a test-driven development approach to the project.
+
+Built the genesis block - to get the blockchain going.
+
+Added functionality to mine a block - create a new block for the blockchain.
+
+Developed the important sha-256 hash function.
+
+Applied the hash to mine a block.
