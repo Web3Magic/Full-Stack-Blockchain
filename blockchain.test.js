@@ -19,4 +19,26 @@ describe('Blockchain', () => {
     expect(blockchain.chain[blockchain.chain.length-1].data)
       .toEqual(newData);
   });
+
+  describe(' isValidChain()', () => {
+    describe('when the chain does not start with the genesis block', () => {
+      it('returns false', () =>{});
+    });
+
+    describe('when the chain does start with the genesis block and has mutltiple blocks', () => {
+      describe('and a lastHash refrence has changed', () => {
+        it('returns false', () =>{});
+      });
+
+      describe('annnnd the chain contains a block with an invalid field', () =>{
+        it('returs false', () => {});
+      });
+
+      describe('and if the chain does not contain any invalid blocks', () => {
+        it('returns true', () =>{
+          
+        })
+      });
+    });
+  });
 });
