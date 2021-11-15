@@ -5,7 +5,7 @@ describe('Blockchain', () => {
   const blockchain = new Blockchain();
 
   it('contains a `chain` Array instance ', () => {
-    expect(Blockchain.chain instanceof Array).toBe(true);
+    expect(blockchain.chain instanceof Array).toBe(true);
   });
 
   it('starts with the genesis block', () => {
