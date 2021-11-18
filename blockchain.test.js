@@ -2,7 +2,11 @@ const Blockchain = require('./blockchain');
 const Block = require('./block');
 
 describe('Blockchain', () => {
-  const blockchain = new Blockchain();
+  let blockchain;
+
+  beforeEach() => {
+    blockchain = new Blockchain();
+  };
 
   it('contains a `chain` Array instance ', () => {
     expect(blockchain.chain instanceof Array).toBe(true);
