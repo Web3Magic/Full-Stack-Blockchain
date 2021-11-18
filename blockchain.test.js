@@ -23,11 +23,21 @@ describe('Blockchain', () => {
   describe(' isValidChain()', () => {
     describe('when the chain does not start with the genesis block', () => {
       it('returns false', () =>{});
+        blockchain.chain[0] = { data: 'fake-genesis' };
+        
+        expect(blockchain.isValidChain(blockchain.chain)).toBe(false);
     });
 
     describe('when the chain does start with the genesis block and has mutltiple blocks', () => {
       describe('and a lastHash refrence has changed', () => {
         it('returns false', () =>{});
+        blockchain.addBlock({ data:  'foxy'});
+        blockchain.addBlock({ data:  'roxy'});
+        blockchain.addBlock({ data:  'dafox'});
+
+        blockchain.chain[2].lastHash = 'broken-lastHash';
+
+        expect(blockchain.isValidChain(blockchain.chain)).toBe(false);
       });
 
       describe('annnnd the chain contains a block with an invalid field', () =>{
@@ -36,7 +46,7 @@ describe('Blockchain', () => {
 
       describe('and if the chain does not contain any invalid blocks', () => {
         it('returns true', () =>{
-          
+
         })
       });
     });
