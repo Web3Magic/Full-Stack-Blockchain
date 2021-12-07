@@ -33,7 +33,12 @@ Developed the important sha-256 hash function.
 Applied the hash to mine a block.
 
 ---December 7th updates--
-Need a way to quiet the consol, 
-Pub Sub Implimentation on tests with jest globals. 
+Created the fundamental blockchain class.
+
+Developed functionality to validate the blockchain, to allow for chain replacement.
+
+Implemented chain replacement.
+
+Investigated stubbing console output in tests to keep the output clean.
 
 Working on Proof of work and the 51% attack problem. 
