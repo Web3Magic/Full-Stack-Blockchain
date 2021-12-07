@@ -72,6 +72,9 @@ let errorMock, logMock;
 beforeEach(() => {
   errorMock = jest.fn();
   logMock = jest.fn();
+
+  global.console.error = errorMock;
+  global.console.log = logMock;
 });
 
     describe('when the new chain is not longer', () => {
