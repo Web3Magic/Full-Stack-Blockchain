@@ -33,8 +33,13 @@ class Block {
       data,
       difficulty,
       nonce,
-      hash
-    });
+      hash });
+  }
+
+  static adjustDifficulty({ originalBlock, timestamp })  {
+    const { difficulty } = originalBlock;
+
+    return difficulty + 1;
   }
 }
 
