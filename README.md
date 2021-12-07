@@ -31,3 +31,9 @@ Added functionality to mine a block - create a new block for the blockchain.
 Developed the important sha-256 hash function.
 
 Applied the hash to mine a block.
+
+---December 7th updates--
+Need a way to quiet the consol, 
+Pub Sub Implimentation on tests with jest globals. 
+
+Working on Proof of work and the 51% attack problem. 
