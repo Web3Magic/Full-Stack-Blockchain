@@ -42,3 +42,6 @@ Implemented chain replacement.
 Investigated stubbing console output in tests to keep the output clean.
 
 Working on Proof of work and the 51% attack problem. 
+
+---Happy new year ---
+Whats Next. Lets make the mineblock adjust difficulty based upon how much time the last block in the chain took to be mined. 
