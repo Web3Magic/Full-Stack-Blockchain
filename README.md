@@ -45,3 +45,14 @@ Working on Proof of work and the 51% attack problem.
 
 ---Happy new year ---
 Whats Next. Lets make the mineblock adjust difficulty based upon how much time the last block in the chain took to be mined. 
+
+Week of 1-07-2022 - 
+Implemented the proof of work system by adding a difficulty and nonce value to each block.
+
+Adjusted the difficulty for a block to ensure that blocks are mined at a rate which approaches a set mining rate for the system.
+
+Investigated the proof of work system by writing a script which checked how will the dynamic difficulty adjusted the system to approach the mine rate.
+
+Switched the hexadecimal character-based difficulty criteria to a more fine-grained binary bit-based difficulty criteria.
+
+Prevented a potential difficulty jump attack by adding extra validation for the blockchain.
