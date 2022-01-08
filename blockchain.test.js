@@ -66,7 +66,7 @@ describe('Blockchain', () => {
           const nonce = 0
           const data = [];
           const difficulty = lastBlock.difficulty - 3;
-          const hash = cryptoHash(timestamp,lastHash, difficulty, nonce, data);
+          const hash = cryptoHash(timestamp, lastHash, difficulty, nonce, data);
           const badBlock = new Block({
              timestamp, 
              lastHash, 
@@ -75,7 +75,7 @@ describe('Blockchain', () => {
              difficulty, 
              data
           });
-          
+
           blockchain.chain.push(badBlock);
 
           expect(Blockchain.isValidChain(blockchain.chain)).toBe(false);
