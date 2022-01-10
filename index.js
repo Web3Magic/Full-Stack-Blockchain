@@ -7,7 +7,7 @@ const app = express();
 const blockchain = new Blockchain();
 
 //Parse out Json Body 
-app.get(bodyParser.json());
+app.use(bodyParser.json());
 
 //get the blockchains block
 app.get('/api/blocks', (req, res) => {
