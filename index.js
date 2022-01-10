@@ -11,7 +11,7 @@ app.get('/api/blocks', (req, res) => {
   res.json(blockchain.chain);
 });
 
-//Post to the blockchain
+//Post to the blockchain, need body parser
 app.post('/api/mine', (req, res) => {
  const { data } = req.body;
  blockchain.addBlock({ data });
