@@ -1,7 +1,8 @@
 const redis = require('redis');
 
 const CHANNELS = {
-  TEST: 'TEST'
+  TEST: 'TEST',
+  BLOCKCHAIN: "BLOCKCHAIN"
 };
 
 class PubSub {
@@ -10,6 +11,7 @@ class PubSub {
     this.subscriber = redis.createClient();
 
     this.subscriber.subscribe(CHANNELS.TEST);
+    this.subscriber.subscribe(CHANNELS.BLOCKCHAIN);
     this.subscriber.on(
       'message', 
       (channel, message) => this.handleMessage(channel, message)
@@ -21,6 +23,4 @@ class PubSub {
   }
 }
 
-const testPubSub = new PubSub();
-
-setTimeout(() => testPubSub.publisher.publish(CHANNELS.TEST, 'foo'), 1000);
+module.exports = PubSub;
