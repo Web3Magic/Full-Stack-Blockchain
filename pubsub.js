@@ -22,6 +22,12 @@ class PubSub {
 
   handleMessage(channel,message) {
     console.log(`Message Received. Channel: ${message}.`);
+
+    const parsedMessage = JSON.parse(message);
+
+    if (channel === CHANNELS.BLOCKCHAIN) {
+      this.blockchain.replaceChain(parsedMessage);
+    };
   }
 
   subscribeToChannels() { 
