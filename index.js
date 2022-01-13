@@ -8,6 +8,8 @@ const app = express();
 const blockchain = new Blockchain();
 const pubsub = new PubSub({ blockchain });
 
+setTimeout(() => pubsub.broadcastChain(), 1000);
+
 //Parse out Json Body 
 app.use(bodyParser.json());
 

@@ -1,51 +1,8 @@
-const redis = require('redis');
+const PubNub = require('pubnub');
 
-const CHANNELS = {
-  TEST: 'TEST',
-  BLOCKCHAIN: "BLOCKCHAIN"
+const credentials = {
+  publishKey: 'pub-c-7e454122-4ceb-4a3d-b8e5-258329f09133',
+  subscribeKey: 'sub-c-addec6f6-74a3-11ec-ba3b-4692c5eb8503',
+  secretKey: 'sec-c-NzgyMjJkMDEtMmRlNS00MzMwLTg3OGYtMDIwNjc5YmQ5YmNm',
 };
 
-class PubSub {
-  constructor({ blockchain }) {
-    this.blockchain = blockchain;
-
-    this.publisher = redis.createClient();
-    this.subscriber = redis.createClient();
-
-    this.subscribeToChannels();
-
-    this.subscriber.on(
-      'message', 
-      (channel, message) => this.handleMessage(channel, message)
-    );
-  }
-
-  handleMessage(channel,message) {
-    console.log(`Message Received. Channel: ${message}.`);
-
-    const parsedMessage = JSON.parse(message);
-
-    if (channel === CHANNELS.BLOCKCHAIN) {
-      this.blockchain.replaceChain(parsedMessage);
-    };
-  }
-
-  subscribeToChannels() { 
-  Object.values(CHANNELS).forEach(channel => {
-    this.subscriber.subscribe(channel);
-    });
-  }
-
-  publish({ channel, message }) {
-    this.publisher.publish(channel, message);
-  }
-
-  broadcastChain() {
-    this.publish({
-      channel: CHANNELS.BLOCKCHAIN,
-      message: JSON.stringify(this.blockchain.chain)
-    });
-  }
-}
-
-module.exports = PubSub;
