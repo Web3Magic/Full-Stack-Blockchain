@@ -7,30 +7,11 @@ const credentials = {
 };
 
 const CHANNELS = {
-  TEST: 'TEST'
+  TEST: 'TEST'  
 };
 
 class PubSub {
   constructor() {
     this.pubnub = new PubNub(credentials);
-
-    this.pubnub.suscribe({ channels: Object.values(CHANNELS) });
-    this.pubnub.addListener(this.listener());
   }
-
-  listener() {
-    return {
-        message: messageObject => {
-          const { channel, message } = messageObject;
-
-          console.log(`message received. Channel: ${channel}. Message: ${message}`);
-        }
-      };
-    }
-
-    publish({ channel, message}) {
-      this.pubnub.publish({ channel, message});
-    }
-  } 
-
-module.exports = PubSub;
+}
