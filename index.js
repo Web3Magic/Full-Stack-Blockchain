@@ -26,6 +26,14 @@ app.post('/api/mine', (req, res) => {
  res.redirect('/api/blocks');
 });
 
-//Port Listener on 3000 
-const PORT = 3000;
+//Create peer ports
+const DEFAULT_PORT = 3000;
+let PEER_PORT;
+
+//Check if peer is on port
+if(process.env.GENERATE_PEER_PORT === 'true') {
+  PEER_PORT = DEFAULT_PORT + Math.ceil(Math.random() * 1000)
+}
+//Port Listener on 3000 => changed to PEER PORT
+const PORT = PEER_PORT || DEFAULT_PORT;
 app.listen(PORT, () => console.log(`listening on localhost:${PORT}`));
