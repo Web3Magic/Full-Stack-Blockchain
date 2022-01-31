@@ -1,12 +1,13 @@
 {
-  "name": "FullStackBlockchain",
+  "name": "full-stack-blockchain",
   "version": "1.0.0",
   "description": "A blockchain that will change how private families and businesses operate",
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "dev-peer": "cross-env GENERATE_PEER_PORT='true' nodemon index.js" 
   },
   "repository": {
     "type": "git",
