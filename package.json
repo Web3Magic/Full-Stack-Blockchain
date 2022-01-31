@@ -7,13 +7,14 @@
     "test": "jest --watchAll",
     "start": "node index.js",
     "dev": "nodemon index.js"
-   
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Web3Magic/Full-Stack-Blockchain.git"
   },
-  "keywords": ["blockchain, crypto, wallets,"],
+  "keywords": [
+    "blockchain, crypto, wallets,"
+  ],
   "author": "Roxanne Fey Fullen",
   "license": "MIT",
   "bugs": {
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/Web3Magic/Full-Stack-Blockchain#readme",
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "jest": "^23.6.0",
     "nodemon": "^1.18.4"
   },
