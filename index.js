@@ -18,10 +18,12 @@ app.get('/api/blocks', (req, res) => {
   res.json(blockchain.chain);
 });
 
-//Post to the blockchain, need body parser
+//Post to the blockchain,body parser to parse object
 app.post('/api/mine', (req, res) => {
  const { data } = req.body;
  blockchain.addBlock({ data });
+//broadcast the chain
+pubsub.broadcastChain();
 
  res.redirect('/api/blocks');
 });
