@@ -45,7 +45,8 @@ class PubSub {
       }
     };
   }
-
+//does not have a call back to fire after success for the unsusbscribe feature to work in pubnub...  
+//redundant publishing to the same local subscriber will be as noisy no-ops
   publish({ channel, message}) {
     this.pubnub.publish({ channel, message });
   }
