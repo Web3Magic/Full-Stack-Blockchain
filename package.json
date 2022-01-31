@@ -1,7 +1,7 @@
 {
   "name": "FullStackBlockchain",
   "version": "1.0.0",
-  "description": "Git Test",
+  "description": "A blockchain that will change how private families and businesses operate",
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll",
@@ -13,8 +13,8 @@
     "type": "git",
     "url": "git+https://github.com/Web3Magic/Full-Stack-Blockchain.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["blockchain, crypto, wallets,"],
+  "author": "Roxanne Fey Fullen",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Web3Magic/Full-Stack-Blockchain/issues"
