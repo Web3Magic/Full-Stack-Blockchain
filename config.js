@@ -13,4 +13,4 @@ const GENESIS_DATA = {
 //Testing blockchain with a set amount given. 
 const STARTING_BALANCE = 1000; 
 
-module.exports = { GENESIS_DATA, MINE_RATE };
+module.exports = { GENESIS_DATA, MINE_RATE, STARTING_BALANCE };
